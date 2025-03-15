@@ -25,7 +25,7 @@ class ShoppingScreen extends StatelessWidget {
               padding: const EdgeInsets.all(16.0),
               child: Text(
                 'Welcome to Healing Bloom Pharmacy – Trusted Skincare Solutions',
-                style: Theme.of(context).textTheme.headline5?.copyWith(color: Colors.purple),
+                style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.purple),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -93,7 +93,7 @@ class FeaturedMedicinesSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Featured Medicines', style: Theme.of(context).textTheme.headline5),
+          Text('Featured Medicines', style: Theme.of(context).textTheme.headlineSmall),
           SizedBox(height: 10),
           MedicineCard(),
           MedicineCard(),
@@ -128,7 +128,7 @@ class VerifiedVendorsSection extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Verified Vendors', style: Theme.of(context).textTheme.headline5),
+          Text('Verified Vendors', style: Theme.of(context).textTheme.headlineSmall),
           SizedBox(height: 10),
           VendorCard(),
           VendorCard(),

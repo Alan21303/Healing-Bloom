@@ -64,17 +64,7 @@ class _SignInScreenState extends State<SignInScreen> {
     final theme = Theme.of(context);
 
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(60),
-        child: TopNavigationBar(
-          userName: 'John Doe', // Replace with actual user name
-          onProfileTap: () {
-            // Logic to show the side menu
-            Scaffold.of(context).openDrawer();
-          },
-        ),
-      ),
-      drawer: SideMenu(),
+      
       body: AuthBackground(
         child: SafeArea(
           child: Padding(
