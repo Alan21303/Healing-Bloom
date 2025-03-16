@@ -3,9 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:healingbloom/screens/home/home.dart';
 import 'package:healingbloom/screens/testscreens/test_screen.dart';
 import 'package:healingbloom/screens/scanskin/camera.dart';
-import 'package:healingbloom/screens/documents/upload.dart';
+// import 'package:healingbloom/screens/documents/';
 import 'package:healingbloom/screens/shopping/shopping.dart';
 import 'package:healingbloom/theme/app_theme.dart';
+import 'package:healingbloom/screens/documents/document_upload_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -17,12 +18,12 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _selectedIndex = 0;
 
-  final List<Widget> _screens = const [
+  final List<Widget> _screens = [
     HomeScreen(),
     TestScreen(),
-    ScanSkinScreen(),
+    CameraScreen(),
     ShoppingScreen(),
-    DocumentUploadScreen(),
+    DocumentScreen(),
   ];
 
   void _onItemTapped(int index) {

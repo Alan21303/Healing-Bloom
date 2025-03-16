@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:healingbloom/widgets/top_navigation_bar.dart';
+import 'package:healingbloom/widgets/side_menu.dart';
 
 class DocumentListScreen extends StatelessWidget {
   const DocumentListScreen({super.key});
@@ -6,9 +8,16 @@ class DocumentListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Your Documents'),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: TopNavigationBar(
+          userName: 'John Doe',
+          onProfileTap: () {
+            Scaffold.of(context).openDrawer();
+          },
+        ),
       ),
+      drawer: SideMenu(),
       body: Column(
         children: [
           Padding(
@@ -58,10 +67,6 @@ class DocumentCard extends StatelessWidget {
           onSelected: (value) {
             if (value == 'view') {
               // Navigate to detailed document view
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DocumentDetailsScreen()),
-              );
             } else if (value == 'delete') {
               // Logic to delete the document
             }

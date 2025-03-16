@@ -62,4 +62,20 @@ class AppTheme {
       prefixIconColor: velvetAmethyst,
     ),
   );
+
+  
+
+  static const BoxShadow luxuryShadow = BoxShadow(
+    color: Color(0x33703D8A),
+    blurRadius: 20,
+    spreadRadius: 2,
+    offset: Offset(0, 4),
+  );
+
+  static const Color primaryColor = royalPlum;
+  static const Gradient gradientPrimary = LinearGradient(
+    colors: [royalPlum, velvetAmethyst],
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+  );
 }
